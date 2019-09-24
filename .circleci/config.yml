@@ -18,6 +18,7 @@ jobs:
     docker:
       - image: circleci/ruby:2.4.1
     steps:
+      - checkout
       - run: echo "bad world" 
       - run: sleep 10
 workflows:
