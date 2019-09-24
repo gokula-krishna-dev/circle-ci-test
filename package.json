@@ -1,0 +1,19 @@
+{
+  "name": "circle-ci-test",
+  "version": "1.0.0",
+  "description": "To try circle ci",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gokula-krishna-dev/circle-ci-test.git"
+  },
+  "author": "Gokula Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gokula-krishna-dev/circle-ci-test/issues"
+  },
+  "homepage": "https://github.com/gokula-krishna-dev/circle-ci-test#readme"
+}
