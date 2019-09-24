@@ -1,22 +1,32 @@
- version: 2
- jobs:
-   one:
-     docker:
-       - image: circleci/ruby:2.4.1
-     steps:
-       - checkout
-       - run: echo "Hello world"
-       - run: sleep 23
-   two:
-     docker:
-       - image: circleci/ruby:2.4.1
-     steps:
-       - checkout
-       - run: echo "new world" 
-       - run: sleep 10
-         # workflows:
-         #   version: 2
-         #   one_and_two:
-         #     jobs:
-         #       - one
-         #       - two
+version: 2
+jobs:
+  one:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "Hello world"
+      - run: sleep 23
+  two:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "new world" 
+      - run: sleep 10
+  three:
+    docker:
+      - image: circleci/ruby:2.4.1
+    steps:
+      - checkout
+      - run: echo "new world" 
+      - run: sleep 10
+workflows:
+  version: 2
+  one_and_two:
+    jobs:
+      - one
+      - two
+      - three:
+          requires:
+            - one
